@@ -12,12 +12,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-import {
-  setTranslations,
-  setDefaultLanguage,
-  translate,
-  setLanguage,
-} from "react-multi-lang";
+import { setTranslations, setDefaultLanguage } from "react-multi-lang";
 import en from "./translations/en.json";
 import hi from "./translations/hi.json";
 

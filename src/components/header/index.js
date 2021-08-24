@@ -6,32 +6,49 @@ import {
   Form,
   FormControl,
   Button,
+  Container,
 } from "react-bootstrap";
-import { useTranslation } from "react-multi-lang";
+import { useTranslation, setLanguage } from "react-multi-lang";
 
 const Header = (props) => {
   const t = useTranslation();
 
   return (
-    <Navbar bg="light" expand="sm" sticky="top" className="border-bottom">
-      <Navbar.Brand href="/web">GUARDIAN</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Form className="d-flex mr-auto">
-          <FormControl
-            type="search"
-            placeholder="Search"
-            className="mr-2"
-            aria-label="Search"
-          />
-        </Form>
-        <Nav>
-          <Button variant="success" className="mr-2">
-            {t("signin", { name: "João" })}
-          </Button>
-          <Button>Sign Out</Button>
-        </Nav>
-      </Navbar.Collapse>
+    <Navbar bg="light" expand="lg" sticky="top" className="border-bottom">
+      <Container fluid>
+        <Navbar.Brand href="/">
+          {" "}
+          <img
+            alt=""
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Android_O_Preview_Logo.png/900px-Android_O_Preview_Logo.png"
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
+          />{" "}
+          {t("abnft")}
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Form className="d-flex me-auto ms-auto">
+            <FormControl
+              type="search"
+              placeholder="Search"
+              className="mr-2"
+              aria-label="Search"
+            />
+          </Form>
+          <Nav>
+            <Button
+              variant="success"
+              className="me-2"
+              onClick={() => setLanguage("hi")}
+            >
+              {t("signin", { name: "João" })}
+            </Button>
+            <Button onClick={() => setLanguage("en")}>{t("signout")}</Button>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
     </Navbar>
   );
 };

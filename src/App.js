@@ -11,6 +11,7 @@ import CustomToastComponent from "./components/toast/custom-toast";
 import NotFound from "./pages/not-found";
 import { get_user } from "./auth/auth";
 const Home = lazy(() => import("./pages/home"));
+const ForgotPassword = lazy(() => import("./pages/forgot-password"));
 
 function App() {
   return (
@@ -34,6 +35,11 @@ function App() {
               }
             >
               <Switch>
+                <Route
+                  exact
+                  path="/forgot-password"
+                  component={ForgotPassword}
+                />
                 <Route exact path="/" component={Home} />
                 <Route path="/not-found" component={NotFound} />
                 <Route exact component={NotFound} />

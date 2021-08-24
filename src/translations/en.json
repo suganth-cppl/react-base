@@ -1,3 +1,21 @@
 {
-    "signin": "Sign In {name}"
+    "abnft" : "AB NFT",
+    "signin": "Sign In",
+    "signup":"Sign Up",
+    "signout":"Sign Out",
+    "verify":"Verify",
+    "otp":"OTP",
+    "name":"Name",
+    "username":"Username",
+    "emailaddress":"Email Address",
+    "confirmpassword":"Confirm Password",
+    "password":"Password",
+    "sendemail":"Send Email",
+    "dontreceivecode":"Don't receive code?",
+    "resend":"Resend?",
+    "logintitle": "Login And Explore In My World",
+    "forgotpassword":"Forgot Password",
+    "donthaveaccount":"Don't have an account?",
+    "haveaccount":"Already have an account?",
+    "homedesc": "Explore the world around you with us with comfortable and quality services, let's join immediately and get the benefits"
 }
