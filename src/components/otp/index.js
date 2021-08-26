@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./../header";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-multi-lang";
 import InputText from "./../input-text";

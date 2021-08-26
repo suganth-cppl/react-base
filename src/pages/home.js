@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/header";
-import ContentLoader from "react-content-loader";
+// import ContentLoader from "react-content-loader";
 import { useTranslation } from "react-multi-lang";
 import rectImg from "./../images/Rectangle.png";
 import LoginComponent from "./../components/login";
@@ -21,6 +21,7 @@ const Home = () => {
           </div>
           <div className="col text-center">
             <img
+              alt="This is the background"
               src={rectImg}
               style={{
                 objectFit: "scale-down",

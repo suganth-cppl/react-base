@@ -17,10 +17,10 @@ const RegisterComponent = () => {
         <InputText title={t("emailaddress")} />
       </div>
       <div className="form-group mb-4">
-        <InputText title={t("password")} />
+        <InputText title={t("password")} type="password" />
       </div>
       <div className="form-group mb-4">
-        <InputText title={t("confirmpassword")} />
+        <InputText title={t("confirmpassword")} type="password" />
       </div>
       <div className="form-group mt-2 mb-4">
         <button type="button" className="btn btn-primary btn-lg w-100">

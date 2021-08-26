@@ -25,6 +25,7 @@ const ForgotPassword = () => {
           </div>
           <div className="col text-center">
             <img
+              alt="background of the website"
               src={rectImg}
               style={{
                 objectFit: "scale-down",

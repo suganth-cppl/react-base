@@ -10,7 +10,7 @@ import {
 } from "react-bootstrap";
 import { useTranslation, setLanguage } from "react-multi-lang";
 import { useHistory } from "react-router";
-import { useSelector, useDispatch, connect } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { change_lang_action } from "./../../redux/actions/lang_action";
 
 const Header = (props) => {
@@ -54,7 +54,7 @@ const Header = (props) => {
               title={state.lang === "en" ? "English" : "Hindi"}
               id="basic-nav-dropdown"
             >
-              <NavDropdown.Item href="javascript:;" onClick={handleChangeLang}>
+              <NavDropdown.Item onClick={handleChangeLang}>
                 {state.lang === "en" ? "Hindi" : "English"}
               </NavDropdown.Item>
             </NavDropdown>

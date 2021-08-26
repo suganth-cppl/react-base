@@ -1,8 +1,5 @@
 @import "./common";
 
-$open-sans: "Open Sans", sans-serif !important;
-$roboto-sans: "Roboto", sans-serif !important;
-
 // * {
 //   -webkit-transition: all 0.2s ease-in;
 //   transition: all 0.2s ease-in;
@@ -110,6 +107,7 @@ body {
     opacity: 0;
   }
 }
+
 /*--- end of flone preloader ---*/
 
 // label {
@@ -125,6 +123,12 @@ body {
 //   font-size: 13px !important;
 //   padding: 10px 15px !important;
 // }
+
+input,
+textarea {
+  font-size: 0.8rem !important;
+  font-weight: bold !important;
+}
 
 // select {
 //   border-radius: 2px !important;

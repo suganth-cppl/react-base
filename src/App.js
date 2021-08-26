@@ -1,15 +1,9 @@
 import React, { Suspense, lazy, useEffect } from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ToastProvider } from "react-toast-notifications";
 import { useSelector, connect } from "react-redux";
 
 import CustomToastComponent from "./components/toast/custom-toast";
-import { get_user } from "./auth/auth";
 
 import "./App.css";
 import { change_lang_action } from "./redux/actions/lang_action";
@@ -26,7 +20,7 @@ function App(props) {
   useEffect(() => {
     props.change_lang(state.lang);
     setLanguage(state.lang);
-  }, []);
+  }, [props, state.lang]);
 
   return (
     <>
@@ -81,19 +75,19 @@ const MyCustomToast = (props) => {
   return <CustomToastComponent {...props}></CustomToastComponent>;
 };
 
-const PrivateRoute = ({ component: Component, authed, ...rest }) => {
-  const user = get_user();
+// const PrivateRoute = ({ component: Component, authed, ...rest }) => {
+//   const user = get_user();
 
-  return (
-    <Route
-      {...rest}
-      render={(props) =>
-        user?.id ? (
-          <Component {...props} />
-        ) : (
-          <Redirect to={{ pathname: "/", state: { from: props.location } }} />
-        )
-      }
-    />
-  );
-};
+//   return (
+//     <Route
+//       {...rest}
+//       render={(props) =>
+//         user?.id ? (
+//           <Component {...props} />
+//         ) : (
+//           <Redirect to={{ pathname: "/", state: { from: props.location } }} />
+//         )
+//       }
+//     />
+//   );
+// };
