@@ -3,7 +3,7 @@ import Header from "../components/header";
 import ContentLoader from "react-content-loader";
 import { useTranslation } from "react-multi-lang";
 import rectImg from "./../images/Rectangle.png";
-import LoginComponent from "./../components/login/index";
+import LoginComponent from "./../components/login";
 
 const Home = () => {
   const t = useTranslation();
@@ -14,8 +14,8 @@ const Home = () => {
       <div className="container-fluid">
         <div className="row justify-content-center">
           <div className="col" style={{ padding: "7rem" }}>
-            <h2>{t("loginandexploreinmyworld")}</h2>
-            <small>{t("homedesc")}</small>
+            <h2>{t("logintitle")}</h2>
+            <small>{t("logindesc")}</small>
 
             <LoginComponent />
           </div>

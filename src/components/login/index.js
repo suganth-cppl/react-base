@@ -1,18 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-multi-lang";
+import InputText from "../input-text";
 
 const LoginComponent = () => {
   const t = useTranslation();
   return (
     <div className="bg-white mt-3 p-5 rounded">
       <div className="form-group mb-4">
-        <small className="text-secondary">{t("emailaddress")}</small>
-        <input type="email" className="form-control" />
+        <InputText title={t("emailaddress")} />
       </div>
+
       <div className="form-group">
-        <small className="text-secondary">{t("password")}</small>
-        <input type="password" className="form-control" />
+        <InputText title={t("password")} type="password" />
       </div>
       <div className="form-group text-end mt-2">
         <small className="text-secondary">
@@ -26,7 +26,7 @@ const LoginComponent = () => {
       </div>
       <div className="form-group mt-2">
         <small className="text-secondary">
-          {t("donthaveaccount")} <a href="/">{t("signup")}</a>
+          {t("donthaveaccount")} <Link to="/">{t("signup")}</Link>
         </small>
       </div>
     </div>

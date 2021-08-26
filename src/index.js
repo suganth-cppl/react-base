@@ -23,7 +23,6 @@ import "./index.css";
 import "./styles/style.scss";
 
 setTranslations({ en, hi });
-setDefaultLanguage("en");
 
 const store = createStore(
   rootReducer,

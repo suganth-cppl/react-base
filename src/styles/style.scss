@@ -3,10 +3,10 @@
 $open-sans: "Open Sans", sans-serif !important;
 $roboto-sans: "Roboto", sans-serif !important;
 
-* {
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
-}
+// * {
+//   -webkit-transition: all 0.2s ease-in;
+//   transition: all 0.2s ease-in;
+// }
 
 body {
   margin: 0;
@@ -112,33 +112,33 @@ body {
 }
 /*--- end of flone preloader ---*/
 
-label {
-  font-size: 11px;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: #343a40;
-  margin-bottom: 0.25rem;
-}
+// label {
+//   font-size: 11px;
+//   text-transform: uppercase;
+//   font-weight: 600;
+//   color: #343a40;
+//   margin-bottom: 0.25rem;
+// }
 
-input {
-  border-radius: 2px !important;
-  font-size: 13px !important;
-  padding: 10px 15px !important;
-}
+// input {
+//   border-radius: 2px !important;
+//   font-size: 13px !important;
+//   padding: 10px 15px !important;
+// }
 
-select {
-  border-radius: 2px !important;
-  font-size: 13px !important;
-}
+// select {
+//   border-radius: 2px !important;
+//   font-size: 13px !important;
+// }
 
-button,
-.btn {
-  border-radius: 2px !important;
-  font-size: 13px !important;
-  svg {
-    margin-top: -4px;
-  }
-}
+// button,
+// .btn {
+//   border-radius: 2px !important;
+//   font-size: 13px !important;
+//   svg {
+//     margin-top: -4px;
+//   }
+// }
 
 .top-loader {
   display: none;
@@ -165,24 +165,6 @@ button,
   }
 }
 
-a {
-  font-size: 13px;
-  font-weight: 600;
-
-  &:hover {
-    color: #000000;
-  }
-}
-
 .react-toast-notifications__container {
   z-index: 10000 !important;
-}
-
-.view-height {
-  height: 72vh;
-  overflow: auto;
-}
-
-table {
-  font-size: 13px;
 }

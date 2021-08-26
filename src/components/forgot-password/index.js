@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-multi-lang";
+import InputText from "../input-text";
 
 const ForgotPasswordComponent = () => {
   const t = useTranslation();
@@ -8,8 +9,7 @@ const ForgotPasswordComponent = () => {
   return (
     <div className="bg-white mt-3 p-5 rounded">
       <div className="form-group mb-4">
-        <small className="text-secondary">{t("emailaddress")}</small>
-        <input type="email" className="form-control" />
+        <InputText type="email" title={t("emailaddress")} />
       </div>
 
       <div className="form-group d-flex justify-content-between">

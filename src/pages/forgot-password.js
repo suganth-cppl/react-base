@@ -1,10 +1,10 @@
 import React from "react";
 import { useTranslation } from "react-multi-lang";
-import Header from "./../components/header/index";
+import Header from "./../components/header";
 import rectImg from "./../images/Rectangle.png";
-import ForgotPasswordComponent from "./../components/forgot-password/index";
-import OtpComponent from "./../components/otp/index";
-import RegisterComponent from "./../components/register/index";
+import ForgotPasswordComponent from "./../components/forgot-password";
+import OtpComponent from "./../components/otp";
+import RegisterComponent from "./../components/register";
 
 const ForgotPassword = () => {
   const t = useTranslation();
@@ -18,8 +18,8 @@ const ForgotPassword = () => {
             <h2>{t("forgotpassword")}</h2>
             <small>{t("homedesc")}</small>
 
-            {/* <ForgotPasswordComponent />
-            <OtpComponent /> */}
+            <ForgotPasswordComponent />
+            <OtpComponent />
 
             <RegisterComponent />
           </div>

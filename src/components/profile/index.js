@@ -1,39 +1,34 @@
 import React from "react";
 import { useTranslation } from "react-multi-lang";
-import { Link } from "react-router-dom";
 import InputText from "../input-text";
+import InputTextArea from "./../input-textarea";
 
-const RegisterComponent = () => {
+const ProfileInformation = () => {
   const t = useTranslation();
   return (
     <div className="bg-white mt-3 p-5 rounded">
       <div className="form-group mb-4">
-        <InputText title={t("name")} />
+        <InputText title={t("displayname")} />
       </div>
       <div className="form-group mb-4">
         <InputText title={t("username")} />
       </div>
       <div className="form-group mb-4">
+        <InputTextArea title={t("bio")} rows={3} />
+      </div>
+      <div className="form-group mb-4">
         <InputText title={t("emailaddress")} />
       </div>
       <div className="form-group mb-4">
-        <InputText title={t("password")} />
-      </div>
-      <div className="form-group mb-4">
-        <InputText title={t("confirmpassword")} />
-      </div>
-      <div className="form-group mt-2 mb-4">
-        <button type="button" className="btn btn-primary btn-lg w-100">
-          {t("signup")}
-        </button>
+        <InputText title={t("sociallink")} />
       </div>
       <div className="form-group mt-2">
-        <small className="text-secondary">
-          {t("haveaccount")} <Link to="/">{t("signin")}</Link>
-        </small>
+        <button type="button" className="btn btn-primary btn-lg w-100">
+          {t("updateprofile")}
+        </button>
       </div>
     </div>
   );
 };
 
-export default RegisterComponent;
+export default ProfileInformation;

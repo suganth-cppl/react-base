@@ -1,17 +1,16 @@
 import React from "react";
-import Header from "./../header/index";
+import Header from "./../header";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-multi-lang";
+import InputText from "./../input-text";
 
 const OtpComponent = () => {
   const t = useTranslation();
   return (
     <div className="bg-white mt-3 p-5 rounded">
       <div className="form-group mb-4">
-        <small className="text-secondary">{t("otp")}</small>
-        <input type="email" className="form-control" />
+        <InputText title={t("otp")} />
       </div>
-
       <div className="form-group text-end">
         <small className="text-secondary">
           {t("dontreceivecode")}{" "}

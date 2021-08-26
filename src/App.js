@@ -1,5 +1,4 @@
-import React, { Suspense, lazy } from "react";
-import "./App.css";
+import React, { Suspense, lazy, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,13 +6,28 @@ import {
   Redirect,
 } from "react-router-dom";
 import { ToastProvider } from "react-toast-notifications";
+import { useSelector, connect } from "react-redux";
+
 import CustomToastComponent from "./components/toast/custom-toast";
-import NotFound from "./pages/not-found";
 import { get_user } from "./auth/auth";
+
+import "./App.css";
+import { change_lang_action } from "./redux/actions/lang_action";
+import { setLanguage } from "react-multi-lang";
+
 const Home = lazy(() => import("./pages/home"));
 const ForgotPassword = lazy(() => import("./pages/forgot-password"));
+const Profile = lazy(() => import("./pages/profile"));
+const NotFound = lazy(() => import("./pages/not-found"));
 
-function App() {
+function App(props) {
+  const state = useSelector((state) => state);
+
+  useEffect(() => {
+    props.change_lang(state.lang);
+    setLanguage(state.lang);
+  }, []);
+
   return (
     <>
       <div className="top-loader">Loading...</div>
@@ -40,6 +54,7 @@ function App() {
                   path="/forgot-password"
                   component={ForgotPassword}
                 />
+                <Route exact path="/profile" component={Profile} />
                 <Route exact path="/" component={Home} />
                 <Route path="/not-found" component={NotFound} />
                 <Route exact component={NotFound} />
@@ -52,7 +67,15 @@ function App() {
   );
 }
 
-export default App;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    change_lang: (input) => {
+      dispatch(change_lang_action(input));
+    },
+  };
+};
+
+export default connect(null, mapDispatchToProps)(App);
 
 const MyCustomToast = (props) => {
   return <CustomToastComponent {...props}></CustomToastComponent>;
