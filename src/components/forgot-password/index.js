@@ -14,10 +14,10 @@ const ForgotPasswordComponent = () => {
 
       <div className="form-group d-flex justify-content-between">
         <small className="text-secondary">
-          <Link to="/forgot-password">{t("signup")}</Link>
+          <Link to="/register">{t("signup")}</Link>
         </small>
         <small className="text-secondary">
-          <Link to="/forgot-password">{t("signin")}</Link>
+          <Link to="/">{t("signin")}</Link>
         </small>
       </div>
       <div className="form-group mt-2">

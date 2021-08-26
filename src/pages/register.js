@@ -1,11 +1,11 @@
 import React from "react";
-import { useTranslation } from "react-multi-lang";
 import Header from "./../components/header";
 import rectImg from "./../images/Rectangle.png";
-import ForgotPasswordComponent from "./../components/forgot-password";
+import RegisterComponent from "./../components/register";
+import { useTranslation } from "react-multi-lang";
 import OtpComponent from "./../components/otp";
 
-const ForgotPassword = () => {
+const Register = () => {
   const t = useTranslation();
 
   return (
@@ -14,10 +14,9 @@ const ForgotPassword = () => {
       <div className="container-fluid">
         <div className="row justify-content-center">
           <div className="col" style={{ padding: "7rem" }}>
-            <h2>{t("forgotpassword")}</h2>
+            <h2>{t("register")}</h2>
             <small>{t("homedesc")}</small>
-
-            <ForgotPasswordComponent />
+            <RegisterComponent />
             <OtpComponent />
           </div>
           <div className="col text-center">
@@ -37,4 +36,4 @@ const ForgotPassword = () => {
   );
 };
 
-export default ForgotPassword;
+export default Register;

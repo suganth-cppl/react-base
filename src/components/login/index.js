@@ -26,7 +26,7 @@ const LoginComponent = () => {
       </div>
       <div className="form-group mt-2">
         <small className="text-secondary">
-          {t("donthaveaccount")} <Link to="/">{t("signup")}</Link>
+          {t("donthaveaccount")} <Link to="/register">{t("signup")}</Link>
         </small>
       </div>
     </div>

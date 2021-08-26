@@ -13,6 +13,7 @@ const Home = lazy(() => import("./pages/home"));
 const ForgotPassword = lazy(() => import("./pages/forgot-password"));
 const Profile = lazy(() => import("./pages/profile"));
 const NotFound = lazy(() => import("./pages/not-found"));
+const Register = lazy(() => import("./pages/register"));
 
 function App(props) {
   const state = useSelector((state) => state);
@@ -48,6 +49,7 @@ function App(props) {
                   path="/forgot-password"
                   component={ForgotPassword}
                 />
+                <Route exact path="/register" component={Register} />
                 <Route exact path="/profile" component={Profile} />
                 <Route exact path="/" component={Home} />
                 <Route path="/not-found" component={NotFound} />

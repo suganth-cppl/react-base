@@ -7,7 +7,9 @@ const ProfileInformation = () => {
   const t = useTranslation();
   return (
     <div className="bg-white mt-3 p-5 rounded">
-      <div className="form-group mb-4">
+      <h4> {t("profileinformation")}</h4>
+
+      <div className="form-group mb-4 mt-3">
         <InputText title={t("displayname")} />
       </div>
       <div className="form-group mb-4">
