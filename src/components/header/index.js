@@ -36,9 +36,8 @@ const Header = (props) => {
   return (
     <>
       <Navbar bg="white" expand="lg" sticky="top" className="border-bottom">
-        <Container fluid>
+        <Container>
           <Navbar.Brand onClick={handleShow} role="button">
-            {" "}
             <img
               alt=""
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Android_O_Preview_Logo.png/900px-Android_O_Preview_Logo.png"
@@ -102,7 +101,7 @@ const Header = (props) => {
                 active={location.pathname === "/dashboard"}
                 href="/dashboard"
               >
-                Dashboard
+                {t("dashboard")}
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
@@ -110,7 +109,7 @@ const Header = (props) => {
                 active={location.pathname === "/profile"}
                 href="/profile"
               >
-                Edit Profile
+                {t("editprofile")}
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
@@ -118,7 +117,7 @@ const Header = (props) => {
                 active={location.pathname === "/payment-method"}
                 href="/payment-method"
               >
-                Payment Method
+                {t("paymentmethod")}
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
@@ -126,7 +125,7 @@ const Header = (props) => {
                 active={location.pathname === "/seller-settings"}
                 href="/seller-settings"
               >
-                Seller Settings
+                {t("sellersettings")}
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
@@ -134,7 +133,7 @@ const Header = (props) => {
                 active={location.pathname === "/notifications"}
                 href="/notifications"
               >
-                Notifications
+                {t("notifications")}
               </Nav.Link>
             </Nav.Item>
             <Nav.Item>
@@ -142,7 +141,7 @@ const Header = (props) => {
                 active={location.pathname === "/security"}
                 href="/security"
               >
-                Security
+                {t("security")}
               </Nav.Link>
             </Nav.Item>
           </Nav>

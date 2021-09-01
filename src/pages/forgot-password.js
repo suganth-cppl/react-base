@@ -11,7 +11,7 @@ const ForgotPassword = () => {
   return (
     <>
       <Header />
-      <div className="container-fluid">
+      <div className="container">
         <div className="row justify-content-center">
           <div className="col" style={{ padding: "7rem" }}>
             <h2>{t("forgotpassword")}</h2>
