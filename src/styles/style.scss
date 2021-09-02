@@ -110,13 +110,34 @@ body {
 
 /*--- end of flone preloader ---*/
 
-// label {
-//   font-size: 11px;
-//   text-transform: uppercase;
-//   font-weight: 600;
-//   color: #343a40;
-//   margin-bottom: 0.25rem;
-// }
+label {
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 0.25rem;
+}
+
+.otp-input {
+  text-align: center;
+
+  label {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.otp-input > div {
+  justify-content: center;
+}
+
+.otp-input input {
+  width: 2em !important;
+  height: 2em;
+  font-size: 1rem;
+  margin: 0 0.4rem;
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+}
 
 // input {
 //   border-radius: 2px !important;
